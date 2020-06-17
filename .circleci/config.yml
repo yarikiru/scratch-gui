@@ -124,6 +124,7 @@ jobs:
           command: |
             google-chrome --version
             chromedriver --version
+            node --version
             export TESTFILES=$(circleci tests glob "test/integration/*.test.js" | circleci tests split --split-by=timings)
             $(npm bin)/jest ${TESTFILES} --reporters="default" --reporters="jest-junit"
       - store_test_results:
