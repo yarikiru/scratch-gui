@@ -122,6 +122,8 @@ jobs:
           environment:
               JEST_JUNIT_OUTPUT_DIR: test-results/integration
           command: |
+            echo google-chrome --version
+            echo chromedriver --version
             export TESTFILES=$(circleci tests glob "test/integration/*.test.js" | circleci tests split --split-by=timings)
             $(npm bin)/jest ${TESTFILES} --reporters="default" --reporters="jest-junit"
       - store_test_results:
