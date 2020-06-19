@@ -193,7 +193,7 @@ workflows:
       - store_dist:
           requires:
             - build
-        # Disable deployment while running in parallel with Travis
+      # Disable deployment while running in parallel with Travis
       # - deploy-npm:
       #     requires:
       #       - lint
