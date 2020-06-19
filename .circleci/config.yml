@@ -68,7 +68,7 @@ jobs:
     <<: *defaults
     environment:
       JEST_JUNIT_OUTPUT_NAME: results.xml
-      NODE_OPTIONS: --max-old-space-size=4000
+      NODE_OPTIONS: --max-old-space-size=7250
     steps:
       - *restore_git_cache
       - checkout
