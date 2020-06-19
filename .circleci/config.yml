@@ -134,7 +134,7 @@ jobs:
   deploy-npm:
     <<: *defaults
     environment:
-      NODE_OPTIONS: --max-old-space-size=4000
+      NODE_OPTIONS: --max-old-space-size=7250
     steps:
       - *restore_git_cache
       - *restore_dist_cache
