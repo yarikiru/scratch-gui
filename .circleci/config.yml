@@ -86,7 +86,7 @@ jobs:
     <<: *defaults
     environment:
       NODE_ENV: production
-      NODE_OPTIONS: --max-old-space-size=4000
+      NODE_OPTIONS: --max-old-space-size=7250
     steps:
       - *restore_git_cache
       - checkout
