@@ -187,6 +187,11 @@ workflows:
       - store_dist:
           requires:
             - build
+      scheduled-workflow:
+    triggers:
+      - schedule:
+          cron: "*/10 * * * *"
+
       # Disable deployment while running in parallel with Travis
       # - deploy-npm:
       #     requires:
