@@ -111,7 +111,7 @@ jobs:
           path: dist
   integration:
     <<: *defaults
-    parallelism: 1
+    parallelism: 2
     environment:
       JEST_JUNIT_OUTPUT_NAME: results.txt
     steps:
@@ -179,12 +179,15 @@ workflows:
       - lint:
           requires:
             - setup
-      - build:
-          requires:
-            - setup
       - unit:
           requires:
             - setup
+      - build:
+          requires:
+            - setup
+      - integration:
+          requires:
+            - build
       - store_build:
           requires:
             - build
