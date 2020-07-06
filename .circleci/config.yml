@@ -166,13 +166,14 @@ jobs:
 
 workflows:
   version: 2
-  scheduled-workflow:
-    triggers:
-      - schedule:
-          cron: "0 * * * *"
-          filters:
-              branches:
-                  only: circle-node-testing
+  # scheduled-workflow:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 * * * *"
+  #         filters:
+  #             branches:
+  #                 only: circle-node-testing
+  build-test-deploy:
     jobs:
       - setup
       - lint:
