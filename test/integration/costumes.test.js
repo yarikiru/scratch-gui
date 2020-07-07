@@ -1,4 +1,4 @@
-import path from 'path';
+// import path from 'path';
 import SeleniumHelper from '../helpers/selenium-helper';
 
 const {
@@ -13,7 +13,7 @@ const {
     // scope
 } = new SeleniumHelper();
 
-const uri = path.resolve(__dirname, '../../build/index.html');
+// const uri = path.resolve(__dirname, '../../build/index.html');
 
 let driver;
 
