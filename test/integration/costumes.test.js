@@ -2,15 +2,15 @@ import path from 'path';
 import SeleniumHelper from '../helpers/selenium-helper';
 
 const {
-    clickText,
-    clickXpath,
-    findByText,
-    findByXpath,
-    getDriver,
-    getLogs,
-    loadUri,
-    rightClickText,
-    scope
+    // clickText,
+    // clickXpath,
+    // findByText,
+    // findByXpath,
+    getDriver
+    // getLogs,
+    // loadUri,
+    // rightClickText,
+    // scope
 } = new SeleniumHelper();
 
 const uri = path.resolve(__dirname, '../../build/index.html');
