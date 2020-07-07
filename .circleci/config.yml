@@ -181,6 +181,9 @@ workflows:
       - lint:
           requires:
             - setup
+      - unit:
+          requires:
+            - setup
       - build:
           requires:
             - setup
