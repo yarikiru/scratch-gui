@@ -1,5 +1,5 @@
 // import path from 'path';
-// import SeleniumHelper from '../helpers/selenium-helper';
+import SeleniumHelper from '../helpers/selenium-helper';
 //
 const {
     clickText,
