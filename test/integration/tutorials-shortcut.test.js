@@ -27,7 +27,7 @@ describe('Working with shortcut to Tutorials library', () => {
         await clickText('Make It Spin');
         await findByXpath('//div[contains(@class, "step-video")]');
     });
-    test('can open hidden tutorials', async () => {
+    test.skip('can open hidden tutorials', async () => {
         await loadUri(`${uriPrefix}whatsnew`);
         // should open the tutorial video immediately
         await findByXpath('//div[contains(@class, "step-video")]');
