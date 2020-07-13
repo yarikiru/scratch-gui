@@ -38,4 +38,4 @@ describe('Working with shortcut to Tutorials library', () => {
 //         await findByXpath('//div[contains(@class, "step-video")]');
 //     });
 //     // @todo navigating cards, etc.
-// });
+});
