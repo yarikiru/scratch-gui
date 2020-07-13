@@ -1,4 +1,4 @@
-// import path from 'path';
+import path from 'path';
 import SeleniumHelper from '../helpers/selenium-helper';
 //
 const {
@@ -26,12 +26,12 @@ describe('Working with shortcut to Tutorials library', () => {
     });
 });
 
-    test('opens with the Tutorial Library showing', async () => {
-        await loadUri(uri);
-        // make sure there is a tutorial visible that doesn't have a shortcut
-        await clickText('Make It Spin');
-        await findByXpath('//div[contains(@class, "step-video")]');
-    });
+test('opens with the Tutorial Library showing', async () => {
+    await loadUri(uri);
+    // make sure there is a tutorial visible that doesn't have a shortcut
+    await clickText('Make It Spin');
+    await findByXpath('//div[contains(@class, "step-video")]');
+});
 //
 //     test('can open hidden tutorials', async () => {
 //         await loadUri(`${uriPrefix}whatsnew`);
