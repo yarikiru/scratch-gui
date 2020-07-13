@@ -1,26 +1,30 @@
 // import path from 'path';
 // import SeleniumHelper from '../helpers/selenium-helper';
 //
-// const {
-//     clickText,
-//     findByXpath,
-//     getDriver,
-//     loadUri
-// } = new SeleniumHelper();
+const {
+    clickText,
+    findByXpath,
+    getDriver,
+    loadUri
+} = new SeleniumHelper();
 //
 // const uri = path.resolve(__dirname, '../../build/index.html?tutorial=all');
 // const uriPrefix = path.resolve(__dirname, '../../build/index.html?tutorial=');
 //
-// let driver;
+let driver;
 //
-// describe('Working with shortcut to Tutorials library', () => {
-//     beforeAll(() => {
-//         driver = getDriver();
-//     });
-//
-//     afterAll(async () => {
-//         await driver.quit();
-//     });
+describe('Working with shortcut to Tutorials library', () => {
+    beforeAll(() => {
+        driver = getDriver();
+    });
+
+    afterAll(async () => {
+        await driver.quit();
+    });
+    test('empty test', async () => {
+        await expect(1).toEqual(1);
+    });
+});
 //
 //     test('opens with the Tutorial Library showing', async () => {
 //         await loadUri(uri);
