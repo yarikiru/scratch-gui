@@ -26,7 +26,7 @@ describe('Working with costumes', () => {
         await driver.quit();
     });
 
-    test('Adding a costume through the library', async () => {
+    test.skip('Adding a costume through the library', async () => {
         // This is needed when running the tests all at once or it just fails...
         await driver.quit();
         driver = getDriver();
@@ -43,7 +43,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Adding a costume by surprise button', async () => {
+    test.skip('Adding a costume by surprise button', async () => {
         await loadUri(uri);
         await clickText('Costumes');
         const el = await findByXpath('//button[@aria-label="Choose a Costume"]');
@@ -55,7 +55,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Adding a costume by paint button', async () => {
+    test.skip('Adding a costume by paint button', async () => {
         await loadUri(uri);
         await clickText('Costumes');
         const el = await findByXpath('//button[@aria-label="Choose a Costume"]');
@@ -67,7 +67,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Duplicating a costume', async () => {
+    test.skip('Duplicating a costume', async () => {
         await loadUri(uri);
         await clickText('Costumes');
 
@@ -82,7 +82,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Converting bitmap/vector in paint editor', async () => {
+    test.skip('Converting bitmap/vector in paint editor', async () => {
         await loadUri(uri);
         await clickText('Costumes');
 
@@ -105,7 +105,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Undo/redo in the paint editor', async () => {
+    test.skip('Undo/redo in the paint editor', async () => {
         await loadUri(uri);
         await clickText('Costumes');
         await clickText('costume1', scope.costumesTab);
@@ -119,7 +119,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Adding an svg from file', async () => {
+    test.skip('Adding an svg from file', async () => {
         await loadUri(uri);
         await clickText('Costumes');
         const el = await findByXpath('//button[@aria-label="Choose a Costume"]');
@@ -134,7 +134,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Adding a png from file (gh-3582)', async () => {
+    test.skip('Adding a png from file (gh-3582)', async () => {
         await loadUri(uri);
         await clickText('Costumes');
         const el = await findByXpath('//button[@aria-label="Choose a Costume"]');
@@ -148,7 +148,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Adding several costumes with a gif', async () => {
+    test.skip('Adding several costumes with a gif', async () => {
         await loadUri(uri);
         await clickText('Costumes');
         const el = await findByXpath('//button[@aria-label="Choose a Costume"]');
@@ -169,7 +169,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Adding a letter costume through the Letters filter in the library', async () => {
+    test.skip('Adding a letter costume through the Letters filter in the library', async () => {
         await loadUri(uri);
         await driver.manage()
             .window()
@@ -183,7 +183,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Costumes animate on mouseover', async () => {
+    test.skip('Costumes animate on mouseover', async () => {
         await loadUri(uri);
         await clickXpath('//button[@aria-label="Choose a Sprite"]');
         const searchElement = await findByXpath("//input[@placeholder='Search']");
@@ -198,7 +198,7 @@ describe('Working with costumes', () => {
         await expect(logs).toEqual([]);
     });
 
-    test('Adding multiple costumes at the same time', async () => {
+    test.skip('Adding multiple costumes at the same time', async () => {
         const files = [
             path.resolve(__dirname, '../fixtures/gh-3582-png.png'),
             path.resolve(__dirname, '../fixtures/100-100.svg')

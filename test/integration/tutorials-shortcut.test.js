@@ -21,13 +21,13 @@ describe('Working with shortcut to Tutorials library', () => {
     afterAll(async () => {
         await driver.quit();
     });
-    test.skip('opens with the Tutorial Library showing', async () => {
+    test('opens with the Tutorial Library showing', async () => {
         await loadUri(uri);
         // make sure there is a tutorial visible that doesn't have a shortcut
         await clickText('Make It Spin');
         await findByXpath('//div[contains(@class, "step-video")]');
     });
-    test.skip('can open hidden tutorials', async () => {
+    test('can open hidden tutorials', async () => {
         await loadUri(`${uriPrefix}whatsnew`);
         // should open the tutorial video immediately
         await findByXpath('//div[contains(@class, "step-video")]');
